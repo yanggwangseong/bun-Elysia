@@ -1,6 +1,8 @@
 import { Elysia, t } from "elysia";
+import { swagger } from "@elysiajs/swagger";
 
 new Elysia()
+  .use(swagger())
   .get("/id/:id", () => "Hello World!", {
     query: t.Object({
       name: t.String(),
