@@ -9,4 +9,5 @@ new Elysia()
       id: t.Number(),
     }),
   })
+  .post("/countries", ({ body: country }) => country)
   .listen(3000);
